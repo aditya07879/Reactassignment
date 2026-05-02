@@ -13,26 +13,22 @@ function Navbar() {
   return (
     <div className="w-full bg-black p-4">
       <nav className="max-w-7xl mx-auto flex items-center justify-between border border-zinc-800 rounded-lg px-4 h-16">
-
         {/* Logo */}
         <div className="flex items-center gap-2">
-         
-          <h2 className="text-lg font-bold text-white">
-            ReactAssignment
-          </h2>
+          <h2 className="text-lg font-bold text-white">ReactAssignment</h2>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-  <Link
-    key={item.name}
-    to={item.href}
-    className="text-gray-400 hover:text-blue-400 transition"
-  >
-    {item.name}
-  </Link>
-))}
+            <Link
+              key={item.name}
+              to={item.href}
+              className="text-gray-400 hover:text-blue-400 transition"
+            >
+              {item.name}
+            </Link>
+          ))}
 
           <a
             href="https://chaicode.com/"
@@ -55,13 +51,13 @@ function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden mt-2 border border-zinc-800 rounded-lg bg-black p-4 space-y-3">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
-              className="block text-gray-400 hover:text-blue-400"
+              to={item.href}
+              className="text-gray-400 hover:text-blue-400 transition"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
 
           <a

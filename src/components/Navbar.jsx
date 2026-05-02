@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,14 +25,14 @@ function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-gray-400 hover:text-blue-400 transition"
-            >
-              {item.name}
-            </a>
-          ))}
+  <Link
+    key={item.name}
+    to={item.href}
+    className="text-gray-400 hover:text-blue-400 transition"
+  >
+    {item.name}
+  </Link>
+))}
 
           <a
             href="https://chaicode.com/"

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ProfileCard } from "../components/profileCard";
+import { ProfileCard } from "../components/ProfileCard";
 
 
 function UserData() {

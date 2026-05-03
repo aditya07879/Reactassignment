@@ -8,6 +8,11 @@ function Navbar() {
     { name: "ProductData", href: "/" },
     { name: "Jokes", href: "/jokes" },
     { name: "Books", href: "/books" },
+    { name: "Quote", href: "/quote" },
+    { name: "Users", href: "/user" },
+    { name: "Meals", href: "/meal" },
+    { name: "Videos", href: "/videos" },
+    { name: "Cats", href: "/cats" },
   ];
 
   return (
